@@ -9,12 +9,21 @@ import './App.css';
 class App extends React.Component {
   render(){
   return (
-    <Provider store={store}>
-      
-        <Pagetitle/>
-        <Landing/>
-      
-    </Provider>
+    <div className="wrapper">
+          <div className="main">
+            <div className="form-container">
+              <div className="row">
+                
+                <Provider store={store}>
+                <div className="title-container">
+                    <Pagetitle/>
+                    <Landing/>
+                </div>  
+                </Provider>
+                </div>
+              </div>
+            </div>
+          </div>
   );
   }
 };

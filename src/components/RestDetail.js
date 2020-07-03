@@ -17,7 +17,7 @@ export class RestDetail extends Component {
                         <span className="rest-value"> {restaurant.address}</span>
                         </p>
 
-                        <p className="rest-key">Arae: 
+                        <p className="rest-key">Area: 
                         <span className="rest-value"> {restaurant.area}</span>
                         </p>
                     

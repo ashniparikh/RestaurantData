@@ -7,11 +7,15 @@ export class RestaurantContainer extends Component {
 
     const { restaurants } = this.props;
 
+    
+
     let content = '';
 
         content = restaurants.map((restaurant, index) => 
             <RestDetail key={index} restaurant={restaurant} />
           )
+    
+
         
     return(
         
