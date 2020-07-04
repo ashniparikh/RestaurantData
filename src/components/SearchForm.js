@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {searchCity, fetchRestaurants,filteredRest} from '../actions/searchActions';
+import {searchCity, fetchRestaurants,filterRest} from '../actions/searchActions';
 
 import { connect } from 'react-redux';
 
@@ -20,9 +20,9 @@ export class SearchForm extends Component {
 
     render() {
       return (
-        <div>
+        
           <div className="container">
-          <div className="col-md-4">{`${this.props.filteredRest.length} products found.`}</div> 
+              
             <form id="searchForm" onSubmit={this.onSubmit}>
               <input
                 type="text"
@@ -31,21 +31,20 @@ export class SearchForm extends Component {
                 placeholder="Enter City..."
                 onChange={this.onChange}
               />
-              <input
-              type="text"
-              className="form-control"
-              name="searchText"
-              placeholder="Refine by..."
-              value={this.props.name}
-              onChange={(e)=>this.props.filteredRest(this.props.restaurants,e.target.value)}
-            />
               
               <button type="submit" className="btn btn-primary">
                 Search
               </button>
             </form>
+            <input
+              type="text"
+              className="form-control"
+              name="searchText"
+              placeholder="Refine by..."
+              onChange={(e)=>this.props.filterRest(this.props.restaurants,e.target.value)}
+            />
           </div>
-        </div>
+        
       );
     }
   }
@@ -57,4 +56,4 @@ export class SearchForm extends Component {
     restaurants:state.restaurants.filteredRest,
   });
 
-  export default connect(mapStateToProps,{searchCity,fetchRestaurants,filteredRest})(SearchForm);
+  export default connect(mapStateToProps,{searchCity,fetchRestaurants,filterRest})(SearchForm);
