@@ -1,6 +1,5 @@
 import React from 'react';
 import Pagetitle from './components/Pagetitle';
-
 import SearchForm from './components/SearchForm';
 import RestaurantContainer from './components/RestaurantContainer';
 
