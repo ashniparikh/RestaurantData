@@ -5,9 +5,9 @@ export class RestDetail extends Component {
   render() {
     const { restaurant } = this.props;
     return (
-        <div className="searchContainer pure-g">
+        <div className="searchContainer ">
         
-        <div className="rest_info pure-u"> 
+        <div className="rest_info "> 
                         <p className="rest-key"><strong>Restaurant Name:</strong>
                         <span className="rest-value"> {restaurant.name}</span>
                         </p>

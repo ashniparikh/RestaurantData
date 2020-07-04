@@ -53,6 +53,7 @@ export class SearchForm extends Component {
     text: state.restaurants.text,
     restaurants:state.restaurants.items,
     name: state.restaurants.name,
+    address: state.restaurants.address,
     restaurants:state.restaurants.filteredRest,
   });
 

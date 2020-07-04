@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RestDetail from './RestDetail';
-import { filter } from 'async';
+
 
 const filterRestaurants = (restaurants, name) => {
-  return restaurants.filter((res) => res.name.toLowerCase().includes(name))
+  return restaurants.filter((res) => (res.name.toLowerCase().includes(name)))
 }
+
 
 
 export class RestaurantContainer extends Component {
   render() {
 
-    const { restaurants, text, name } = this.props;
-    console.log(this.props)
-    console.log("From Container")
-    console.log(restaurants)
+    const { restaurants, text, name ,address} = this.props;
+    
+    
     console.log(text)
-    console.log(name)
-
-    let filtered = filterRestaurants(restaurants, name)
+    console.log(address)
+    let filtered = filterRestaurants(restaurants, name,address)
     console.log(filtered)
 
     let content = '';
@@ -29,7 +28,7 @@ export class RestaurantContainer extends Component {
         
     return(
         
-          <div className="row">{content}</div>
+          <div className="restdata">{content}</div>
         
     );
   }
@@ -38,7 +37,8 @@ export class RestaurantContainer extends Component {
 const mapStateToProps = state => ({
     restaurants: state.restaurants.restaurants,
     text: state.restaurants.text,
-    name: state.restaurants.name
+    name: state.restaurants.name,
+    address:state.restaurants.address
 });
 
 export default connect(mapStateToProps)(RestaurantContainer);

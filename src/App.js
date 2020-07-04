@@ -11,7 +11,7 @@ class App extends React.Component {
   render(){
   return (
     <div className="wrapper">
-        
+        <div className="imgclass">
             <Provider store={store}>
                
                  <Pagetitle/>
@@ -21,7 +21,7 @@ class App extends React.Component {
                  <RestaurantContainer />
               
             </Provider>
-          
+        </div>
              
       </div>
           
