@@ -21,17 +21,13 @@ export const fetchRestaurants = text => dispatch => {
         .catch(err => console.log(err));
 
 };
-export const filterRest = (restaurants, name, address) => dispatch => {
-    console.log(restaurants)
+export const filterRest = (restaurants, name) => dispatch => {
+
     return dispatch({
         type: FILTER_RESTAURANTS,
         payload: {
             name: name,
-            address: address,
-            //      items:name===''?restaurants:restaurants.filter(restaurant=>{
-            //          return restaurant.name.toLowerCase().includes(name)
 
-            //  })
         }
     })
 

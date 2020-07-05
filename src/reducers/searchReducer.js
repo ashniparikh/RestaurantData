@@ -5,7 +5,7 @@ const initialState = {
     restaurants: [],
     filteredRest: [],
     name: '',
-    address: '',
+
 };
 
 export default function(state = initialState, action) {
@@ -26,8 +26,8 @@ export default function(state = initialState, action) {
         case FILTER_RESTAURANTS:
             return {
                 ...state,
-                name: action.payload.name,
-                address: action.payload.address
+                name: action.payload.name
+
             };
 
         default:

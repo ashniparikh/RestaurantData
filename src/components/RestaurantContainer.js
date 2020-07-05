@@ -12,13 +12,12 @@ const filterRestaurants = (restaurants, name) => {
 export class RestaurantContainer extends Component {
   render() {
 
-    const { restaurants, text, name ,address} = this.props;
+    const { restaurants, text, name } = this.props;
     
     
-    console.log(text)
-    console.log(address)
-    let filtered = filterRestaurants(restaurants, name,address)
-    console.log(filtered)
+    
+    let filtered = filterRestaurants(restaurants, name)
+    
 
     let content = '';
 
