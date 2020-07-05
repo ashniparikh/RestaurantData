@@ -84,6 +84,7 @@ button:active {
     margin-left: 40vw;
 }
 
+
 @media only screen and (max-width:800px) {
     /* For tablets: */
     .main {
