@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import RestDetail from './RestDetail';
 
 
-const filterRestaurants = (restaurants, name) => {
-  return restaurants.filter((res) => (res.name.toLowerCase().includes(name)))
+const filterRestaurants = (restaurants, filter) => {
+  return restaurants.filter((res) => ((res.name.toLowerCase().includes(filter))|| (res.address.toLowerCase().includes(filter))||( res.area.toLowerCase().includes(filter))))
 }
 
 
@@ -12,7 +12,7 @@ const filterRestaurants = (restaurants, name) => {
 export class RestaurantContainer extends Component {
   render() {
 
-    const { restaurants, text, name } = this.props;
+    const { restaurants, name } = this.props;
     
     
     
