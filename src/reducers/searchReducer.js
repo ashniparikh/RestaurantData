@@ -5,7 +5,7 @@ const initialState = {
     restaurants: [],
     filteredRest: [],
     name: '',
-    address: '',
+
 };
 
 export default function(state = initialState, action) {
@@ -27,7 +27,7 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 name: action.payload.name,
-                address: action.payload.address
+
             };
 
         default:

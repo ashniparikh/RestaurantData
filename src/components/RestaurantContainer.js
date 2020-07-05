@@ -3,22 +3,17 @@ import { connect } from 'react-redux';
 import RestDetail from './RestDetail';
 
 
-const filterRestaurants = (restaurants, name) => {
-  return restaurants.filter((res) => (res.name.toLowerCase().includes(name)))
-}
+const filterRestaurants = (restaurants, filter) => {
+  return restaurants.filter((res) => ((res.name.toLowerCase().includes(filter))|| (res.address.toLowerCase().includes(filter))||( res.area.toLowerCase().includes(filter))))}
 
 
 
 export class RestaurantContainer extends Component {
   render() {
 
-    const { restaurants, text, name ,address} = this.props;
+    const { restaurants, name } = this.props;
     
-    
-    console.log(text)
-    console.log(address)
-    let filtered = filterRestaurants(restaurants, name,address)
-    console.log(filtered)
+    let filtered = filterRestaurants(restaurants, name)
 
     let content = '';
 
